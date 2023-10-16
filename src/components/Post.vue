@@ -6,8 +6,8 @@
     <!-- Certified and Delete post container -->
     <div class="text-right flex justify-between items-center px-3 pt-2">
       <span
-        class="material-symbols-outlined text-gray-400"
-        :class="{ 'text-black': post.votes.upvote.count }"
+        class="material-symbols-outlined"
+        :class="{ 'text-anonyaccent font-semibold': post.votes.upvote.count >= 2 }, {'text-gray-400': post.votes.upvote.count < 2}"
         >verified</span
       >
       <span
@@ -175,13 +175,15 @@ let time = computed(() => {
 //computed to return the minimized content length at least 20 words
 let minimizeContent = computed(() => {
   let content = props.post.content;
-  let words = content.split(" ");
-  if (words.length > 20) {
-    return words.slice(0, 20).join(" ") + " ......";
-  } else {
-    return words.slice(0, 20).join(" ");
+  let characterLimit = 200;
+  console.log(content.length);
+  if(content.length > characterLimit){
+    return content.slice(0, characterLimit) + " ...";
+  }else{
+    return content.slice(0, characterLimit);
   }
 });
+
 //computed to return the content along with html tags for highlighted tags
 let highlightWords = computed(() => {
   return minimizeContent.value.replace(

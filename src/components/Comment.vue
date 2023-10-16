@@ -17,7 +17,7 @@
           class="text-sm font-semibold underline underline-offset-2 block mb-1"
           >{{textForWhoseCommentItIs}}</span
         >
-        <p class="text-justify">{{ comment.commentText }}</p>
+        <p class="text-justify break-words">{{ comment.commentText }}</p>
       </div>
       <!-- Reply Input Box -->
       <div class="text-anonyprimary relative">
@@ -57,6 +57,7 @@
               class="bg-transparent w-full placeholder:text-anonyprimary border-b-2 border-b-anonyaccent px-2 py-1 pr-8 outline-none transition-all ease-in-out duration-300 focus:border-b-anonybg"
               placeholder="Leave a reply here"
               v-model="replyText"
+              maxlength="150"
               @keyup.enter="postReply"
             />
             <span

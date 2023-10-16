@@ -7,7 +7,7 @@
       class="fullContentShowcase-container bg-transparent rounded-2xl whitespace-pre-line w-full md:w-3/5 md:h-full md:overflow-y-scroll md:px-5 md:py-10"
     >
       <!-- Content -->
-      <p>{{ store.getters["postMod/getTempPostContent"] }}</p>
+      <p class="break-words">{{ store.getters["postMod/getTempPostContent"] }}</p>
       <!-- Tags -->
       <button
         class="w-full mt-5 py-2 px-4 rounded-2xl bg-anonysecondary text-anonyprimary text-md font-bold tracking-widest flex justify-between transition-all ease-in-out duration-300"
@@ -53,10 +53,12 @@
           class="w-full bg-transparent text-anonytext p-2 pr-11 outline-none placeholder-anonytext border-b-2 border-b-anonyaccent transition-all ease-in-out duration-300 focus:border-b-anonytext"
           placeholder="Leave a comment here"
           v-model="userComment"
+          oninvalid="alert('Must contain 6 or more characters');" pattern=".{6,10}"
           @keyup.enter="postComment"
         />
         <span
           class="material-symbols-outlined absolute top-0 right-0 text-anonytext cursor-pointer p-2 align-middle h-full rounded-t-md transition-all ease-in-out duration-300 hover:bg-anonybg"
+          @click="postComment"
         >
           send
         </span>
