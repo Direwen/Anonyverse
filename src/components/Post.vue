@@ -176,7 +176,6 @@ let time = computed(() => {
 let minimizeContent = computed(() => {
   let content = props.post.content;
   let characterLimit = 200;
-  console.log(content.length);
   if(content.length > characterLimit){
     return content.slice(0, characterLimit) + " ...";
   }else{

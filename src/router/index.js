@@ -25,10 +25,11 @@ const routes = [
     path: '/home',
     name: 'home',
     component: Home,
+    redirect: {name: 'newsfeed'},//to direct user to newsfeed even if he goes backwards from the home default page
     children: [
       // remove "/" from path will show base path name like "/home/profile/:uid"
       {
-        path: '',//default child path 
+        path: 'newsfeed',//default child path 
         name: 'newsfeed',
         component: Newsfeed,
       },

@@ -44,7 +44,7 @@
       <!-- comment title -->
       <div class="flex justify-between items-center">  
         <h3 class="text-xl font-bold tracking-wider uppercase">Comments</h3>
-        <span class="material-symbols-outlined align-middle transition-all ease-in-out duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl">help</span>
+        <!-- <span class="material-symbols-outlined align-middle transition-all ease-in-out duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-xl">help</span> -->
       </div>
       <!-- comment input box for the user -->
       <div class="relative mt-2 mb-10">
