@@ -12,6 +12,7 @@ export default {
     posts: [],
     loadingState: false,
     tags: [],
+    userPosts: [],
   },
 
   getters: {
@@ -59,6 +60,9 @@ export default {
     },
     getTags(state){
       return state.tags;
+    },
+    getUserPosts(state){
+      return state.userPosts;
     }
   },
 
@@ -104,6 +108,9 @@ export default {
     },
     setTags(state, data){
       state.tags = data;
+    },
+    assignUserPosts(state, data){
+      state.userPosts = data;
     }
   },
 
@@ -166,5 +173,8 @@ export default {
       commit("setTags", tempTags);
       
     },
+    setUserPosts({commit}, tempArr){
+      commit("assignUserPosts", tempArr);
+    }
   },
 };

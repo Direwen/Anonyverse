@@ -18,12 +18,8 @@ import store from "../store";
 
 
 onAuthStateChanged(auth, (currentUser) => {
-    store.dispatch("authMod/getUserInfo", currentUser)
-    .then(() => {
-      console.log("UID getter: ", store.getters["authMod/getUID"])
-    })
-    
-  })
+    store.dispatch("authMod/getUserInfo", currentUser);
+})
 
 
 </script>

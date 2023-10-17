@@ -4,7 +4,7 @@
   <!-- If there are no results found -->
   <div
     v-else-if="
-      (store.getters['postMod/getPosts'].length == 0) &
+      store.getters['postMod/getPosts'].length == 0 &&
       !store.getters['postMod/getLoadingState']
     "
     class="mt-16 flex flex-col items-center justify-center"
@@ -106,6 +106,9 @@ watch(
 onUnmounted(() => {
   store.dispatch("queryMod/resetQuery");
 });
+
+console.log("UID => ", store.getters["authMod/getUID"]);
+
 </script>
 
 <style></style>

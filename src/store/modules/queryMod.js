@@ -14,9 +14,15 @@ export default {
             let queryForNormalMode = query(state.collectionRef, orderBy("timestamp", "desc"));
             return state.searchMode ? queryForSearchMode : queryForNormalMode;
         },
+        getQueryForOwner(state, getters, rootState, rootGetters){
+            return query(state.collectionRef, where("uid", "==", rootGetters["authMod/getUID"]), orderBy("timestamp", "desc"));
+        },
         getSearchMode(state){
             return state.searchMode;
         },
+        getCollectionRef(state){
+            return state.collectionRef;
+        }
         
     },
     mutations: {

@@ -37,7 +37,7 @@
       </router-link>
       <!-- profile icon *** added 'replace' to navigate -->
       <router-link
-        :to="{ name: 'profile', params: { uid: uid }}" replace
+        :to="{ name: 'profile', params: { uid: store.getters['authMod/getUID'] }}" replace
         class="flex justify-center items-center p-2 rounded-full transition ease-in-out duration-500 active:scale-90 hover:bg-anonybg "
       >
         <span
@@ -59,7 +59,6 @@ import store from "../store";
 
 let router = useRouter();
 let route = useRoute();
-let uid = computed(() => store.getters["authMod/getUID"]);
 let searchedTxt = ref('');
 
 let searchByTag = () => {
