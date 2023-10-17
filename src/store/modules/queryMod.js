@@ -23,7 +23,6 @@ export default {
         setQuery(state, target){
             state.targetToSearch = target;
             state.searchMode = true;
-            console.log("set query");
         },
         resetQuery(state){
             state.searchMode = false;

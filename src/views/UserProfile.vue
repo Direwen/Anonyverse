@@ -46,10 +46,16 @@ let router = useRouter();
 let userPosts = ref([]);
 let noPost = ref(true);
 //Function to logout
-let logout = () => {
-  console.log("Log Out");
-  signOut(auth);
-  router.push("/");
+let logout = async () => {
+
+  try {
+    await signOut(auth);
+    console.log("Logged out");
+    router.replace('/');
+  } catch (error) {
+    console.log(error.message);
+  }
+  
 };
 
 //real-time database fetching function

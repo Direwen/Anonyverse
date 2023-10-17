@@ -36,11 +36,13 @@ import store from "../store";
 import LoginForm from "../components/LoginForm.vue";
 import SignupForm from "../components/SignupForm.vue";
 import { useRouter } from "vue-router";
-import { computed, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
+import { auth } from "../firebase/config";
 
 let router = useRouter();
 let goToHome = () => {
-  router.push({ name: "newsfeed" });
+  // router.push({ name: "newsfeed" });
+  router.replace({name: "newsfeed"});
 };
 
 //Intro Text Transition
@@ -63,6 +65,9 @@ setInterval(() => {
   state.value = !state.value;
 }, duration);
 
+onMounted(() => {
+  console.log(auth.currentUser);
+})
 
 
 </script>

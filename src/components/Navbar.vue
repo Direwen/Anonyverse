@@ -24,19 +24,20 @@
         v-model="searchedTxt"
         @keyup.enter="searchByTag"
       />
-      <!-- Icons -->
       <span
         class="material-symbols-outlined align-middle select-none transition ease-in-out duration-300 hover:scale-110 active:scale-90 sm:text-3xl sm:mx-1" @click="searchByTag"
         >search</span
       >
-      <router-link :to="{ name: 'newsfeed' }">
+      <!-- newsfeed icon *** added 'replace' to navigate-->
+      <router-link :to="{ name: 'newsfeed' }" replace>
         <span
           class="material-symbols-outlined font-light align-middle select-none hidden transition ease-in-out duration-300 hover:scale-110 active:scale-90 sm:inline-block sm:text-3xl sm:mx-1"
           >feed</span
         >
       </router-link>
+      <!-- profile icon *** added 'replace' to navigate -->
       <router-link
-        :to="{ name: 'profile', params: { uid: uid } }"
+        :to="{ name: 'profile', params: { uid: uid }}" replace
         class="flex justify-center items-center p-2 rounded-full transition ease-in-out duration-500 active:scale-90 hover:bg-anonybg "
       >
         <span
@@ -78,6 +79,7 @@ let searchByTag = () => {
     store.dispatch("postMod/showNoti", false);
   }
 }
+
 </script>
 
 <style></style>

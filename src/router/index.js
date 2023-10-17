@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router"
+import { createMemoryHistory, createRouter, createWebHistory } from "vue-router"
 import Authentication from "../views/Authentication.vue"
 import Home from "../views/Home.vue"
 import Newsfeed from "../views/Newsfeed.vue"
@@ -19,6 +19,7 @@ const routes = [
       }else{
         next({name: 'home'});
       }
+      
     }
   },
   {
@@ -53,6 +54,7 @@ const routes = [
 ];
 
 const router = createRouter({
+
   history: createWebHistory(),
   routes,
 });
