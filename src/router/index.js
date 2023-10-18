@@ -4,6 +4,7 @@ import Home from "../views/Home.vue"
 import Newsfeed from "../views/Newsfeed.vue"
 import UserProfile from "../views/UserProfile.vue"
 import {auth} from "../firebase/config"
+import PageNotFound from "../views/PageNotFound.vue"
 
 
 const routes = [
@@ -50,6 +51,11 @@ const routes = [
         next({name: 'auth'});
       }
     },
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "page_not_found",
+    component: PageNotFound
   }
 ];
 

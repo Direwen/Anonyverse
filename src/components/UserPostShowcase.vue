@@ -42,7 +42,6 @@ import AddPost from "./AddPost.vue";
 let tempArr = ref([]);
 
 let realtimePostFetcher = () => {
-  console.log("in fetcher");
   // Set up a listener using onSnapshot to watch for changes in the Firestore collection.
   onSnapshot(
     store.getters["queryMod/getQueryForOwner"],
@@ -56,7 +55,6 @@ let realtimePostFetcher = () => {
           const docData = { ...snapshotOfDoc.data(), id: snapshotOfDoc.id };
           tempArr.value.push(docData);
         });
-        console.log("got ", tempArr.value.length, " posts");
         store.dispatch("postMod/setUserPosts", tempArr.value);
 
         tempArr.value = [];
