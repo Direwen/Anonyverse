@@ -1,9 +1,9 @@
 <template>
-  <section class="w-screen h-screen flex flex-col">
-    <Navbar></Navbar>
+  <section class="w-screen h-screen overflow-hidden flex flex-col">
+    <Navbar class="w-screen h-fit"></Navbar>
     <NotiBox></NotiBox>
     <ContentContainer class="grow overflow-y-scroll"></ContentContainer>
-    <Menubar></Menubar>
+    <Menubar class="w-screen h-fit"></Menubar>
   </section>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full self-start flex flex-col justify-between rounded-xl bg-anonysecondary text-anonyprimary transition-all ease-in-out duration-300 hover:-translate-y-2 hover:shadow-anonyprimary"
+    class="border-b border-anonyaccent w-full self-start flex flex-col justify-between rounded-xl bg-anonysecondary text-anonyprimary transition-all ease-in-out duration-300 hover:-translate-y-2 hover:shadow-anonyprimary"
     @click="closeSubmenu"
   >
     <!-- Certified and Delete post container -->
@@ -48,7 +48,7 @@
     <!-- bottom Icon Container -->
 
     <div
-      class="w-full bg-anonyprimary px-4 py-2 text-anonytext flex justify-around items-center rounded-b-xl relative"
+      class="w-full bg-anonybg px-4 py-2 text-anonytext flex justify-around items-center rounded-b-xl relative"
     >
       <!-- >>>>>> UPVOTE <<<<<< -->
       <div class="upvote-container cursor-pointer" @click="increase_vote(1)">
