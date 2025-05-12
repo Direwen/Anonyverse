@@ -1,7 +1,49 @@
-# Vue 3 + Vite
+# 🌀 Anonyverse
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A minimalist, anonymous social platform where everyone is just a stranger with a voice.
 
-## Recommended IDE Setup
+Anonyverse lets you share your thoughts, connect via tags, and interact with posts — all without revealing your identity.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+---
+
+## 🚀 Features
+
+- 📝 **Anonymous Posting** – Share text-only posts without user identity
+- 🔍 **Tag-Based Search** – Easily find posts by topic or interest
+- 💬 **Comment & Reply** – Engage in threaded conversations anonymously
+- ⬆️⬇️ **Upvote / Downvote** – Express agreement or disagreement
+- ✏️ **Edit / Delete Posts** – Maintain control over your own content
+- 👤 **User Profiles** – See your posts and interactions (private to you)
+- 🔐 **Firebase Authentication** – Secure login/signup system
+
+---
+
+## 📱 Showcase
+
+### 🔓 Login Page (Desktop)
+![Login Desktop View](https://github.com/Direwen/Anonyverse/blob/master/public/screencapture-anonyverse-netlify-app-2025-05-12-13_04_08.png)
+
+### 📲 Mobile View
+![Mobile App View](https://github.com/Direwen/Anonyverse/blob/master/public/ShowcaseOnMobile.gif)
+
+---
+
+## 🛠️ Built With
+
+- [Vue.js](https://vuejs.org/) – Reactive front-end framework
+- [Firebase](https://firebase.google.com/) – Authentication, Firestore, and Hosting
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first styling
+
+---
+
+## 🔧 Project Setup
+
+```bash
+# install dependencies
+npm install
+
+# start development server
+npm run dev
+
+# build for production
+npm run build
